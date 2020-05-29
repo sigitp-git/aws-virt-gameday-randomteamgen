@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Random Virtual Gameday Team Generator</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div id="app-container">
+		<h1><a href="index.html">Random Virtual Gameday Team Generator</a></h1>
+		<small>*currently none of the participants data stored (for privacy), please save your team allocation on your
+			own
+			notes</small>
+		<small>*generates random team allocation and link to click to email each team</small>
+		<br />
+		<form id="team-settings">
+			<label>
+				<h2>Team Size</h2>
+			</label>
+			<input placeholder="Number of members per team" />
+			<p id="size-error" class="error-text"></p>
+			<label>
+				<h2>Participants</h2>
+			</label>
+			<small>**one participants email per line, participants separated by line break</small>
+			<small>**no blank line please</small>
+			<textarea cols="10" rows="10"
+				placeholder="a@domain.com \nb@domain.com \nc@domain.com \nd@domain.com \n..."></textarea>
+			<p id="people-error" class="error-text"></p>
+			<button>Generate Teams!</button>
+		</form>
+		<div id="team-container" class="team-container"></div>
+	</div>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
