@@ -1,39 +1,191 @@
+/* RESET CSS START */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-	width: 100%;
-	height: 100%;
-	color: darkslateblue;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* RESET CSS DONE */
+
+:root {
+	--off-black: #20222b;
+	--off-white: #a5afd7;
+	--dark-blue: #333745;
+	--blue: #3c4251;
+	--light-blue: #464b5e;
+	--purple: #8357c5;
+	--darkslateblue: darkslateblue;
+	--s-size: 1.2rem;
+	--m-size: 1.6rem;
+	--l-size: 3.2rem;
+	--xl-size: 4.8rem;
+	--desktop-breakpoint: 45rem;
+}
+
+html {
+    /* 1 rem = 10 px */
+    font-size: 62.5%;
+}
+
+body {
+	color: var(--off-white);
+	background: var(--dark-blue);
+	font-family: Helvetica, Arial, sans-serif;
+	/* word-break: break-all; */
+}
+
+.header {
+    background: var(--off-black);
+    margin: 0 0 0 0;
+	padding: var(--m-size 0);
+	padding: var(--s-size);
+}
+
+.header__title {
+    font-size: var(--l-size);
+	margin: 0;
+	color: var(--purple);
+	text-decoration: none;
+	text-align: left;
+}
+.header__title:hover {
+	color: var(--darkslateblue);
+}
+
+.header__subtitle {
+    color: var(--off-white);
+    font-size: var(--s-size);
+	font-weight: 500;
+	text-align: left;
+}
+
+.header__title-sub {
+    font-size: var(--m-size);
+	margin: 0;
+	color: var(--off-white);
+	text-decoration: none;
+	text-align: left;
+}
+
+.sub-header {
+    background: var(--blue);
+    margin: 0 0 0 0;
+	padding: var(--m-size 0);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: var(--s-size);
+	text-align: center;
+}
+
+.title {
+    font-size: var(--m-size);
+	margin: var(--s-size) 0 var(--s-size) 0;
+	color: var(--off-white);
+	text-decoration: none;
+}
+
+.sub-title {
+    font-size: var(--s-size);
+	margin: 0;
+	color: var(--off-white);
+	text-decoration: none;
+}
+
+@media (min-width: var(--desktop-breakpoint)) {
+    .header {
+        margin-bottom: var(--xl-size);
+    }
 }
 
 h1 {
-	font-size: 24px;
-	font-family: 'Helvetica';
+	font-size: var(--l-size);
 	letter-spacing: 1px;
-    text-decoration: underline;
+    text-decoration: none;
     margin-bottom: 10px;
 }
 
 .team {
-    margin-top: 25px;
-    font-size: 14px;
-	font-family: 'Helvetica';
-	margin-bottom: 15px;
-    animation: fadein 4s;
+    margin-top: var(--l-size);
+    font-size: var(--m-size);
+	margin-bottom: var(--m-size);
+	animation: fadein 4s;
+	padding: 0 0 var(--m-size) 0;
+	border-bottom: .1rem solid var(--off-white);
+}
+
+.team a {
+    font-size: var(--m-size);
+	color: var(--purple);
+}
+
+.team a:hover {
+	color: var(--purple);
 }
 
 #app-container {
-	margin-left: 5px;
-	width: 70%;
-	height: 100%;
-	background-color: white;
 	display: flex;
 	flex-direction: column;
-	justify-content: left;
-	align-items: left;
+	justify-content: flex-start;
+	max-width: 60rem;
+    margin: 0 auto;
+    padding: 0;
 }
 
-form {
+.input {
+    background: var(--off-black);
+    border: none;
+	border-bottom: .3rem solid darken(var(--dark-blue), 10%);
 	display: flex;
-    flex-direction: column;
+	width: 57.5rem;
+    flex-grow: 1;
+    margin: var(--m-size) 0 var(--m-size) 0;
+    color: var(--off-white);
+    padding: var(--s-size);
 }
 
 textarea {
@@ -43,24 +195,32 @@ textarea {
 }
 
 .error-text {
-	color: maroon;
+	color: var(--purple);
+	font-size: var(--m-size);
 }
 
 button {
-	padding: 8px;
-	color: white;
-	background-color: darkslateblue;
-	border: 1px solid white;
+    background: var(--darkslateblue);
+    border: none;
+    border-bottom: .6rem solid darken(var(--purple), 10%);
+    color: white;
+    font-weight: bold;
+    font-size: var(--m-size);
+    padding: var(--m-size);
+    width: 100%;
 }
 
 button:hover {
-	background-color: darkslateblue;
-	color: white;
+	background-color: var(--off-white);
+
 	cursor: pointer;
+	border: none;
 }
 
-button:focus {
-	outline: none;
+button:active {
+	background-color: var(--darkslateblue);
+	cursor: pointer;
+	border: none;
 }
 
 @keyframes fadein {

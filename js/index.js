@@ -69,9 +69,9 @@ function addTeamsHTML(teamsArray) {
     teamGroupHTML.innerHTML =
       "<p>Team #" +
       teamNumber +
-      ": <br/>" +
+      ": <br/> <br/>" +
       teamsArray[i] +
-      `</p><a href="mailto:${teamsArray[i]}?subject=Team ${i+1} Details">Email Members</a><hr>`
+      `</p><br/><a href="mailto:${teamsArray[i]}?subject=Team ${i+1} Details">Email Members</a>`
     teamContainerEl.appendChild(teamGroupHTML)
   }
 }

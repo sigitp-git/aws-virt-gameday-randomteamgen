@@ -7,25 +7,37 @@
 </head>
 
 <body>
+	<div class="header">
+		<div id="app-container">
+			<h1><a class="header__title" href="/">AWS Virtual Gameday</a></h1>
+			<h2 class="header__title-sub">Random Team Generator</h2>
+		</div>
+	</div>
+	<div class="sub-header">
+		<div id="app-container">
+			<h2 class="header__subtitle"><u>don't refresh browser while you are working</u> </h2>
+			<h2 class="header__subtitle"> currently none of the
+				participants data stored
+				(for privacy), <u>please save your team allocation on your
+					own notes</u></h2>
+			<h2 class="header__subtitle">generates random team allocation and <u>link to click to email each team</u>
+			</h2>
+		</div>
+	</div>
 	<div id="app-container">
-		<h1><a href="/">Random Virtual Gameday Team Generator</a></h1>
-		<small>*<u>don't refresh browser while you are working</u>, currently none of the participants data stored (for privacy), <u>please save your team allocation on your
-			own notes</u></small>
-		<small>*generates random team allocation and <u>link to click to email each team</u></small>
-		<br />
 		<form id="team-settings">
 			<label>
-				<h2>Team Size</h2>
+				<h2 class="title">Team Size</h2>
 			</label>
-			<input placeholder="Number of members per team" />
+			<input class="input" placeholder="Number of members per team" />
 			<p id="size-error" class="error-text"></p>
 			<label>
-				<h2>Participants</h2>
+				<h2 class="title">Participants</h2>
 			</label>
-			<small>**copy paste here from spreadsheet list of participants email rows</small>
-			<small>**one participants email per line, participants separated by line break</small>
-			<small>**no blank line please</small>
-			<textarea cols="10" rows="10"
+			<p class="sub-title">**copy paste here from spreadsheet list of participants email rows</p>
+			<p class="sub-title">**one participants email per line, participants separated by line break</p>
+			<p class="sub-title">**no blank line please</p>
+			<textarea class="input" cols="10" rows="10"
 				placeholder="a@domain.com \nb@domain.com \nc@domain.com \nd@domain.com \n..."></textarea>
 			<p id="people-error" class="error-text"></p>
 			<button>Generate Teams!</button>
